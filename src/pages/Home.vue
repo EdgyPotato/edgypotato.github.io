@@ -46,7 +46,6 @@ useHead({
                                     to take a look!</p>
         <div class="hero-actions hero-enter">
           <a class="button" href="#work">Explore projects <Arrow /></a>
-          <a class="text-link" :href="site.resumeUrl" target="_blank" rel="noopener noreferrer" aria-label="Résumé PDF (opens in a new tab)">Résumé <Arrow /></a>
         </div>
       </div>
       <div class="hero-model-space"><GeometricBackground /><div class="model-caption"><span>Hardware assembly</span><span class="model-scroll-cue">Scroll to build</span></div></div>
@@ -93,6 +92,6 @@ useHead({
       <div class="credentials"><div class="reveal"><h3>Education</h3><p>Bachelor of Computer Science<br><span class="secondary">Graphics and Multimedia Software · Honours</span></p><p>Universiti Teknologi Malaysia</p><span class="mono">September 2021 to November 2025</span></div><div class="reveal"><h3>Courses and certificates</h3><ul class="credential-list"><li>AWS Academy Cloud Foundations <span>2021</span></li><li>Kaggle Data Visualization <span>2024</span></li><li>Inistate Digital Transformation Champion <span>2025</span></li></ul></div></div>
     </section>
 
-    <section id="contact" class="contact shell section-space"><div class="contact-heading reveal"><h2>Get in touch<span class="accent">.</span></h2><a class="contact-email" :href="`mailto:${site.email}`">{{ site.email }} <Arrow /></a></div><div id="resume" class="resume-note reveal"><h3>Résumé and links</h3><p>Nationality: {{ site.nationality }}</p><p>Languages: English, Mandarin, and Malay.</p><p><a class="text-link" :href="site.resumeUrl" target="_blank" rel="noopener noreferrer" aria-label="View résumé PDF (opens in a new tab)">View résumé PDF <Arrow /></a></p><div class="contact-links"><a :href="site.github">GitHub <Arrow /></a><a :href="site.linkedin">LinkedIn <Arrow /></a></div></div></section>
+    <section id="contact" class="contact shell section-space"><div class="contact-heading reveal"><h2>Get in touch<span class="accent">.</span></h2><a class="contact-email" :href="`mailto:${site.email}`">{{ site.email }} <Arrow /></a></div><div id="resume" class="resume-note reveal"><h3>Résumé and links</h3><p>Nationality: {{ site.nationality }}</p><p>Languages: English, Mandarin, and Malay.</p><div class="contact-links"><a :href="site.github">GitHub <Arrow /></a><a :href="site.linkedin">LinkedIn <Arrow /></a></div></div></section>
   </main>
 </template>

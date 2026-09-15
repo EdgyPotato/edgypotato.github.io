@@ -22,7 +22,7 @@ let removeContextListener = () => {}
 function heroScrollDistance() {
   const reserved = document.querySelector('.hero-sequence')
   const padding = reserved ? parseFloat(getComputedStyle(reserved).paddingBottom) : 0
-  return padding || Math.max(1840, window.innerHeight * 2.3)
+  return padding || Math.max(1480, window.innerHeight * 1.85)
 }
 const staticPath = faces.map(face => face.points.map((p, i) => {
   const [x, y] = projectPoint(p)

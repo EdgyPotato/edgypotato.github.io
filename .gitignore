@@ -18,6 +18,9 @@ coverage
 .env.local
 .env.*.local
 
+# Keep personal documents out of the repository
+public/resume/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -76,7 +76,7 @@ a:hover .arrow { transform: translateX(5px); }
 .text-link:hover { border-color: var(--accent); }
 .home-page { isolation: isolate; }
 .home-page > section, .hero-scene { position: relative; z-index: 1; }
-.hero-sequence { padding-bottom: max(1840px, 230svh); }
+.hero-sequence { padding-bottom: max(1480px, 185svh); }
 .hero-scene { position: relative; }
 .hero-scene .hero { position: relative; }
 .model-background { position: absolute; inset: 0 0 52px; width: 100%; height: calc(100% - 52px); pointer-events: none; }

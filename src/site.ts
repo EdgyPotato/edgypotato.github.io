@@ -1,6 +1,6 @@
 export const base = import.meta.env.BASE_URL
 export const localUrl = (path = '') => `${base}${path.replace(/^\//, '')}`
-export const site = { ...{"name": "TAN KAI YUAN", "givenName": "TAN", "remainingName": "KAI YUAN", "initial": "T", "email": "tanyuanWA@proton.me", "github": "https://github.com/EdgyPotato", "linkedin": "https://linkedin.com/in/tan-kai-yuan-14b8a4302"}, nationality: "Malaysian", resumeUrl: localUrl('resume.pdf') }
+export const site = { ...{"name": "TAN KAI YUAN", "givenName": "TAN", "remainingName": "KAI YUAN", "initial": "T", "email": "tanyuanWA@proton.me", "github": "https://github.com/EdgyPotato", "linkedin": "https://linkedin.com/in/tan-kai-yuan-14b8a4302"}, nationality: "Malaysian" }
 export const canonical = (path = '') => `${(import.meta.env.VITE_SITE_URL || 'https://EdgyPotato.github.io').replace(/\/$/, '')}${localUrl(path)}`
 
 // The header is fixed, so an anchor target has to clear it. Programmatic scrolls ignore scroll-padding-top,

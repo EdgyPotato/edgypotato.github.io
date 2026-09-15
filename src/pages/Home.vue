@@ -29,7 +29,6 @@ useHead({
     { property: 'og:description', content: `Selected web, mobile, and applied AI projects by ${site.name}.` },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: canonical() },
-    { property: 'og:image', content: canonical('og-image.png') },
   ],
   link: [{ rel: 'canonical', href: canonical() }],
 })

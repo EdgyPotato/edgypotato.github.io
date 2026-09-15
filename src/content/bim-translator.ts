@@ -1,0 +1,16 @@
+import type { Project } from './types'
+export default {
+ slug: 'bim-translator', title: 'BIM Translator', category: 'Mobile · Applied AI', status: 'Android / ML prototype', placement: 'featured', order: 2,
+ summary: 'An Android app that recognises 15 static Malaysian Sign Language gestures through the camera and converts the recognised gestures into text. Speech input lets hearing users reply in the same conversation.',
+ technologies: ['Flutter', 'Python', 'FastAPI', 'YOLO11', 'TensorFlow Lite', 'PyTorch'],
+ contribution: 'Built the Flutter app, trained the gesture detector, and integrated the backend, sentence generation, and speech input.',
+ sections: [
+  {title: 'Camera and speech input', body: 'The camera detects a gesture, and the app waits for the same result across several frames before adding the recognised gesture to the text. This helps avoid registering brief hand movements as new signs. Users can also record speech and read the transcription, with previous translations saved locally.'},
+  {title: 'What runs on the phone', body: 'Flutter handles the interface and runs the YOLO11n detector through TensorFlow Lite. The model is bundled with the app, so gesture detection works without a network connection. FastAPI connects speech recordings to Whisper and sends text to Gemma 3 for sentence reconstruction and English to Malay translation.'},
+  {title: 'Evaluating the detector', body: 'The dataset contains 6,910 images across 15 gesture classes. Images from the same recording session stayed together when splitting the data, which kept similar frames from appearing in both training and validation. The revised model scored 0.658 mAP@0.5 on 1,576 validation images. This metric measures how well the detector identifies and locates gestures. Evaluation used 320 × 320 images and 8 bit quantisation, matching the mobile model configuration. These were validation results used during model development, not results from a separate test set.'},
+  {title: 'Evaluation results', body: 'Twenty participants tested the app at UTM and the Society Deaf of Johor centre. The mean System Usability Scale score was 86.1 out of 100. All 20 completed the sign detection and translation task. The study used an earlier app build, so those usability results are separate from the revised detector evaluation.'},
+ ],
+ limitations: 'The prototype covers 15 static gestures, not continuous signing. Detection varies across gestures, and sentence reconstruction can change or omit words. Speech transcription and translation need the backend, whose public API is no longer available. The linked model release also has availability issues.',
+ links: [{label: 'App source', url: 'https://github.com/EdgyPotato/BIM-App'}, {label: 'Model releases', url: 'https://github.com/EdgyPotato/Yolo-Model/releases'}],
+ visual: { title: 'Camera to language', image: 'projects/bim-detector.jpg', card: 'projects/bim-detector-card.webp', alt: 'BIM Android camera interface detecting an open hand gesture', width: 1080, height: 2400, secondaryImage: 'projects/bim-welcome.jpg', secondaryCard: 'projects/bim-welcome-card.webp', secondaryAlt: 'BIM app welcome screen with sign detector and speech input options', secondaryWidth: 1080, secondaryHeight: 2400, caption: 'Original Android screenshots from the project repository' }
+} satisfies Project
